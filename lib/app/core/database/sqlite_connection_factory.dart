@@ -19,7 +19,9 @@ class SqliteConnectionFactory {
   // construtor tipo factory
   factory SqliteConnectionFactory() {
     // * controlando a classe para ser Singleton (uma só instância)
-    _instance ??= SqliteConnectionFactory._instance!;
+    if (_instance == null) {
+      _instance = SqliteConnectionFactory._();
+    }
 
     return _instance!;
   }
