@@ -1,16 +1,47 @@
-# todo_list_provider
+<img src="https://img.shields.io/badge/Version-1.0.0-green"> <img src="https://img.shields.io/badge/license-MIT-blue"> 
 
-A new Flutter project.
+# Todo List com Provider - Academia do Flutter
+# ⚠️ Em desenvolvimento ...
 
-## Getting Started
+Aplicativo simples de gerenciamento de tarefas
 
-This project is a starting point for a Flutter application.
+<h2>Tecnologias</h2>
 
-A few resources to get you started if this is your first Flutter project:
+   <p>
+   - 📱 Flutter
+   - 🗃️ Sqlite
+   - 📦 Providers
+   </p>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<h2>Sobre o App</h2>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p>
+📱 Um aplicativo de lista de tarefas, no qual vai te ajudar a lembrar tudo que tem que fazer em um determinado dia.
+
+<h3>Com ele você pode:</h3>
+
+    ✅ Login com Google 
+    ✅ Tarefas salva em seu dispositivo
+    ✅ Adicionar e remover tarefa
+    ✅ Editar a tarefa
+    ✅ Selecionar data da tarefa
+    ✅ Ver tarefas realizadas
+    ✅ Filtrar por data
+
+</p>
+
+
+<h2>Screenshots</h2>
+<p>
+
+<img src="https://github.com/thallysfs/todo_list_provider/blob/master/screenshots/Screenshot1.png" width="250"> 
+<img src="https://github.com/thallysfs/todo_list_provider/blob/master/screenshots/Screenshot2.png" width="250"> 
+<img src="https://github.com/thallysfs/todo_list_provider/blob/master/screenshots/Screenshot4.png" width="250"> 
+<img src="https://github.com/thallysfs/todo_list_provider/blob/master/screenshots/Screenshot6.png" width="250"> 
+<img src="https://github.com/thallysfs/todo_list_provider/blob/master/screenshots/Screenshot7.png" width="250"> 
+<img src="https://github.com/thallysfs/todo_list_provider/blob/master/screenshots/Screenshot8.png" width="250"> 
+<img src="https://github.com/thallysfs/todo_list_provider/blob/master/screenshots/todolistprovider.gif" width="250"> 
+
+</p>
+
+
