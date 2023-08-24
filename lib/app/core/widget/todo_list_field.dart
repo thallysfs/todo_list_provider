@@ -5,24 +5,32 @@ class TodoListField extends StatelessWidget {
   final String label;
   final IconButton? suffixIconButton;
   final bool obscureText;
-  final ValueNotifier<bool> obscureTextVN;
+  final ValueNotifier<bool> obscuretextVN;
+  final TextEditingController? controller;
+  final FormFieldValidator<String>? validator;
+  final FocusNode? focusNode;
 
-  const TodoListField({
-    Key? key,
-    required this.label,
-    this.obscureText = false,
-    this.suffixIconButton,
-  })  : assert(obscureText == true ? suffixIconButton == null : true,
-'ObscureText não pode ser enviado em conjunto com suffixIconButton'),
-        obscureTextVN = ValueNotifier(obscureText),
+  TodoListField(
+      {Key? key,
+      required this.label,
+      this.suffixIconButton,
+      this.obscureText = false,
+      this.controller,
+      this.validator,
+      this.focusNode})
+      : assert(obscureText == true ? suffixIconButton == null : true,
+            'obscureText não pode ser enviado em conjunto com siffixIconButton'),
+        obscuretextVN = ValueNotifier(obscureText),
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder(
-        valueListenable: obscureTextVN,
-        builder: (_, Value, child) {
-            return TextFormField(
+    return ValueListenableBuilder<bool>(
+      valueListenable: obscuretextVN,
+      builder: (_, obscureTextValue, child) {
+        return TextFormField(
+          controller: controller,
+          validator: validator,
           decoration: InputDecoration(
             labelText: label,
             labelStyle: TextStyle(
@@ -40,17 +48,21 @@ class TodoListField extends StatelessWidget {
             suffixIcon: this.suffixIconButton ??
                 (obscureText == true
                     ? IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          obscuretextVN.value = !obscureTextValue;
+                        },
                         icon: Icon(
-                          TodoListIcons.eye,
+                          obscureTextValue
+                              ? TodoListIcons.eye_slash
+                              : TodoListIcons.eye,
                           size: 15,
                         ),
                       )
                     : null),
           ),
-          obscureText: obscureText,
-        );;
-        },
-    )
+          obscureText: obscureTextValue,
+        );
+      },
+    );
   }
 }
