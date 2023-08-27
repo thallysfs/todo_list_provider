@@ -40,24 +40,11 @@ class _RegisterPageState extends State<RegisterPage> {
         listenerInstance.dispose();
         Navigator.of(context).pop();
       },
+      // Esse atributo é opcional
+      // errorCallback: (notifier, listenerInstance) {
+      //   print('deu ruim!');
+      // },
     );
-    // context.read<RegisterController>().addListener(() {
-    //   final controller = context.read<RegisterController>();
-    //   var success = controller.success;
-    //   var error = controller.error;
-
-    //   if (success) {
-    //     // retorna pra página anterior
-    //     Navigator.of(context).pop();
-    //   } else if (error != null && error.isNotEmpty) {
-    //     ScaffoldMessenger.of(context).showSnackBar(
-    //       SnackBar(
-    //         content: Text(error),
-    //         backgroundColor: Colors.red,
-    //       ),
-    //     );
-    //   }
-    // });
   }
 
   @override

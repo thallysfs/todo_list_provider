@@ -15,10 +15,8 @@ class RegisterController extends DefaultChangeNotifier {
 
       final user = await _userServices.register(email, password);
       if (user != null) {
-        // success
         success();
       } else {
-        // Erro
         setError('Erro ao registrar usuário');
       }
     } on AuthException catch (e) {
