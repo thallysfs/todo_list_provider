@@ -6,7 +6,7 @@ import 'package:todo_list_provider/app/core/database/sqlite_connection_factory.d
 import 'package:todo_list_provider/app/repositories/user/user_repository.dart';
 import 'package:todo_list_provider/app/repositories/user/user_repository_impl.dart';
 import 'package:todo_list_provider/app/services/user/user_service_impl.dart';
-import 'package:todo_list_provider/app/services/user/user_services.dart';
+import 'package:todo_list_provider/app/services/user/user_service.dart';
 
 // * Tudo que for compartilhado por toda aplicação, ficará aqui
 class AppModule extends StatelessWidget {
@@ -25,7 +25,7 @@ class AppModule extends StatelessWidget {
         Provider<UserRepository>(
           create: (context) => UserRepositoryImpl(firebaseAuth: context.read()),
         ),
-        Provider<UserServices>(
+        Provider<UserService>(
           create: (context) => UserServiceImpl(userRepository: context.read()),
         )
       ],
