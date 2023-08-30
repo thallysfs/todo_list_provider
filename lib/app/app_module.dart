@@ -21,7 +21,7 @@ class AppModule extends StatelessWidget {
           create: (_) => SqliteConnectionFactory(),
           lazy: false,
         ),
-        // a tipagem é a interface e no create vai a implementação dessqa interface
+        // a tipagem é a interface e no create vai a implementação dessa interface
         Provider<UserRepository>(
           create: (context) => UserRepositoryImpl(firebaseAuth: context.read()),
         ),
