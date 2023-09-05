@@ -17,7 +17,7 @@ class AuthProvider extends ChangeNotifier {
   User? get user => _firebaseAuth.currentUser;
 
   void loadListener() {
-    _firebaseAuth.userChanges().listen((_) => notifyListeners());
+    _firebaseAuth.userChanges().listen((event) => notifyListeners());
     _firebaseAuth.idTokenChanges().listen((user) {
       // esse método será notificado no login ou logoout
 
